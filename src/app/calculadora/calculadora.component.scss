@@ -1,0 +1,60 @@
+@import "../../variables.scss";
+
+.general {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+.contenedor {
+    background-color: $grayNurse;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid $quillGray;
+    box-shadow: 2px 5px 16px 0px $madison, 5px 5px 15px 5px rgba($doveGray, 0);
+}
+
+.contenedor-formulario-cuadros {
+    display: flex;
+    justify-content: space-around;
+}
+
+.titulo {
+    color: $shark;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.header {
+    color: $madison;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.inputs {
+    height: 20px;
+    margin-bottom: 17px;
+    padding: 10px;
+    border: solid 1px $madison;
+    border-radius: 5px;
+    width: 136px;
+    text-align: center;
+}
+
+.boton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.estilo-cuadros {
+    width: 300px;
+    margin-left: 10px;
+}
+.resultado {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.btn-estilos {
+    background: $madison;
+    color: $blanco;
+    width: 146px;
+    font-size: 16px;
+    border-radius: 4px;
+}
