@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './calculadora.component.html',
   styleUrls: ['./calculadora.component.scss']
 })
-export class CalculadoraComponent implements OnInit {
+export class CalculadoraComponent {
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
 
 }
