@@ -3,22 +3,47 @@
         <div class="titulo">
             <p>Para calcular su índice de masa corporal, ingrese su estatura y peso.</p>
         </div>
-        <form>
+        <form [formGroup]="formularioIMC" (ngSubmit)="calcular()">
             <div class="contenedor-formulario-cuadros">
                 <div class="estilo-cuadros">
                     <p class="header">Sistema métrico</p>
                     <p>ESTATURA</p>
                     <p>en centímetros:</p>
-                    <input class="inputs">
+
+                    <input class="inputs" type="number" formControlName="estatura">
+                    <div class="alerta"
+                        *ngIf="formularioIMC.controls['estatura']?.touched && formularioIMC.controls['estatura']?.errors?.['required']">
+                        Debe ingresar la estatura!
+                    </div>
+                    <div class="alerta"
+                        *ngIf="formularioIMC.controls['estatura']?.touched && formularioIMC.controls['estatura']?.errors?.['min']">
+                        Deben ser numeros positivos!
+                    </div>
                     <p>PESO</p>
                     <p>en kilogramos:</p>
-                    <input class="inputs">
+                    <input class="inputs" type="number" formControlName="peso">
+                    <div class="alerta"
+                        *ngIf="formularioIMC.controls['peso']?.touched && formularioIMC.controls['estatura']?.errors?.['required']">
+                        Debe ingresar el peso!</div>
+
+                    <div class="alerta"
+                        *ngIf="formularioIMC.controls['peso']?.touched && formularioIMC.controls['peso']?.errors?.['min']">
+                        Deben ser numeros positivos!</div>
+
+
                     <div class="boton">
-                        <button class="btn-estilos"> Calcular </button>
+                        <button class="btn-estilos" type="submit" [disabled]="!formularioIMC.valid"> Calcular </button>
                     </div>
                 </div>
                 <div class="estilo-cuadros">
-                    <p class="resultado"> resultado</p>
+                    <p class="resultado"> Resultado</p>
+                    <div [ngSwitch]="mostrarResultado">
+                        <p class="inferior" *ngSwitchCase="imcs.INFERIOR">Peso inferior al normal</p>
+                        <p class="normal" *ngSwitchCase="imcs.NORMAL">Normal</p>
+                        <p class="superior" *ngSwitchCase="imcs.SUPERIOR">Peso superior al normal</p>
+                        <p class="alerta" *ngSwitchCase="imcs.OBESIDAD">Obesidad</p>
+                        <p *ngSwitchDefault>Se necesita hacer el calculo primero</p>
+                    </div>
                 </div>
             </div>
 

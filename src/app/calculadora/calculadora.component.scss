@@ -58,3 +58,46 @@
     font-size: 16px;
     border-radius: 4px;
 }
+
+.alerta {
+    color: $crownOfThorns;
+    background: $cherub;
+    border-color: $azalea;
+    text-align: center;
+    width: 148px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 19px;
+}
+
+.inferior {
+    color: $jewel;
+    background: $edgewater;
+    border-color: $Edgewater;
+    text-align: center;
+    width: 148px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 19px;
+}
+.normal {
+    color: $congressBlue;
+    background: $onahau;
+    border-color: $frenchPass;
+    text-align: center;
+    width: 148px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 19px;
+}
+
+.superior {
+    color: $antiqueBronze;
+    background: $barleyWhite;
+    border-color: $buttermilk;
+    text-align: center;
+    width: 148px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 19px;
+}
