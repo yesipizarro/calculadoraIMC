@@ -58,3 +58,46 @@
     font-size: 16px;
     border-radius: 4px;
 }
+
+.alerta {
+    color: #842029;
+    background: #f8d7da;
+    border-color: #f5c2c7;
+    text-align: center;
+    width: 148px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 19px;
+}
+
+.inferior {
+    color: #0f5132;
+    background: #d1e7dd;
+    border-color: #badbcc;
+    text-align: center;
+    width: 148px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 19px;
+}
+.normal {
+    color: #084298;
+    background: #cfe2ff;
+    border-color: #b6d4fe;
+    text-align: center;
+    width: 148px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 19px;
+}
+
+.superior {
+    color: #664d03;
+    background: #fff3cd;
+    border-color: #ffecb5;
+    text-align: center;
+    width: 148px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 19px;
+}
