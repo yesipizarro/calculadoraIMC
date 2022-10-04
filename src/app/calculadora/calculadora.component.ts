@@ -21,7 +21,7 @@ export class CalculadoraComponent {
   calcular() {
     let valorestatura = this.formularioIMC.value.estatura;
     let valorpeso = this.formularioIMC.value.peso;
-    this.formularioServiceIMC.calcularIMC(valorestatura, valorpeso)
+    this.formularioServiceIMC.calcularIMC(valorestatura, valorpeso);
 
   }
 
@@ -29,13 +29,13 @@ export class CalculadoraComponent {
     let paraMostrar = this.formularioServiceIMC.resultado;
     if (!paraMostrar) return IMC.NEUTRO;
     if (paraMostrar < 18) {
-      return IMC.INFERIOR
+      return IMC.INFERIOR;
     } else if (paraMostrar >= 18.5 && paraMostrar <= 24.9) {
-      return IMC.NORMAL
+      return IMC.NORMAL;
     } else if (paraMostrar >= 25.0 && paraMostrar <= 29.9) {
-      return IMC.SUPERIOR
+      return IMC.SUPERIOR;
     } else {
-      return IMC.OBESIDAD
+      return IMC.OBESIDAD;
     }
   }
 
